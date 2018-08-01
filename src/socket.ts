@@ -5,7 +5,7 @@ export interface IProxy {
   unsubscribe: (subscriptionName: string) => void;
   unsubscribeFromAll?: () => void;
   subscribeToAll?: () => void;
-  getAllSubscriptions?: () => any[];
+  getAllSubscriptions?: () => any;
   getSubscription?: (subscriptionName: string) => any;
   isConnected?: boolean;
 }
@@ -17,7 +17,7 @@ export interface ISocket {
   unsubscribe: (subscriptionName: string) => void;
   unsubscribeFromAll: () => void;
   subscribeToAll: () => void;
-  getAllSubscriptions: () => any[];
+  getAllSubscriptions: () => any;
   getSubscription: (subscriptionName: string) => any;
   getCurrentProxy: () => IProxy;
   isSocketConnected: () => boolean;
@@ -31,12 +31,12 @@ export class Socket implements ISocket {
     this.proxy = proxy
   }
 
-  connect = () => this.proxy.connect();
-  close = () => this.proxy.close();
-  subscribe = (subscriptionName: string, callback: any) => this.proxy.subscribe(subscriptionName, callback);
-  unsubscribe = (subscriptionName: string) => this.proxy.unsubscribe(subscriptionName);
-  subscribeToAll = () => this.proxy.subscribeToAll!();
-  unsubscribeFromAll = () => this.proxy.unsubscribeFromAll!();
+  connect = async() => await this.proxy.connect();
+  close = async() => await this.proxy.close();
+  subscribe = async(subscriptionName: string, callback: any) => await this.proxy.subscribe(subscriptionName, callback);
+  unsubscribe = async(subscriptionName: string) => await this.proxy.unsubscribe(subscriptionName);
+  subscribeToAll = async() => await this.proxy.subscribeToAll!();
+  unsubscribeFromAll = async() => await this.proxy.unsubscribeFromAll!();
   getAllSubscriptions = () => this.proxy.getAllSubscriptions!();
   getSubscription = (subscriptionName: string) => this.proxy.getSubscription!(subscriptionName);
   getCurrentProxy = () => this.proxy;
