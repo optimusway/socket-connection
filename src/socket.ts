@@ -7,7 +7,7 @@ export interface IProxy {
   subscribeToAll?: () => void;
   getAllSubscriptions?: () => any;
   getSubscription?: (subscriptionName: string) => any;
-  isConnected?: boolean;
+  isConnected?: () => boolean;
 }
 
 export interface ISocket {
@@ -40,5 +40,5 @@ export class Socket implements ISocket {
   getAllSubscriptions = () => this.proxy.getAllSubscriptions!();
   getSubscription = (subscriptionName: string) => this.proxy.getSubscription!(subscriptionName);
   getCurrentProxy = () => this.proxy;
-  isSocketConnected = () => this.proxy.isConnected!;
+  isSocketConnected = () => this.proxy.isConnected!();
 }
