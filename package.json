@@ -1,0 +1,39 @@
+{
+  "name": "socket-connection",
+  "version": "1.0.0",
+  "scripts": {
+    "precommit": "lint-staged",
+    "test": "jest",
+    "compile": "tsc --emitDeclarationOnly",
+    "build": "tsc -p . && rollup -c",
+    "start": "npm run-script compile && npm run-script build",
+    "publish": "yarn build"
+  },
+  "main": "./dist/bundle/socket-connection.js",
+  "module": "./dist/index.js",
+  "jsnext:main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "lint-staged": "^7.2.0",
+    "prettier": "^1.13.7",
+    "rollup": "^0.63.4",
+    "rollup-plugin-typescript": "^0.8.1",
+    "rollup-plugin-uglify": "^4.0.0",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.14.0",
+    "typescript": "^2.9.2"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx,js,jsx,json,css,scss,sass}": [
+      "prettier --write",
+      "git add"
+    ],
+    "src/**/*.{ts,tsx}": "tslint --fix"
+  }
+}
