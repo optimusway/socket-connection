@@ -5,7 +5,7 @@ export default {
   entry: './src/index.ts',
 
   output: {
-    file: 'dist/bundle/ws-connection.js',
+    file: 'dist/bundle/socket-connection.js',
     format: 'umd',
     name: 'ws-connection',
     sourcemap: true
