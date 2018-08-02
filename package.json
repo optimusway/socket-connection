@@ -1,6 +1,6 @@
 {
   "name": "socket-connection",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "scripts": {
     "precommit": "lint-staged",
     "test": "jest",

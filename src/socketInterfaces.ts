@@ -1,10 +1,5 @@
 declare module 'socketinterfaces' {
-  export = SocketInterfaces
-}
-
-declare namespace SocketInterfaces {
-
-  export interface IProxy {
+  interface IProxy {
     connect: () => void;
     close: () => void;
     subscribe: (subscriptionName: string, callback: any) => void;
@@ -16,7 +11,7 @@ declare namespace SocketInterfaces {
     isConnected?: () => boolean;
   }
 
-  export interface ISocket {
+  interface ISocket {
     connect: () => void;
     close: () => void;
     subscribe: (subscriptionName: string, callback: any) => void;
@@ -28,5 +23,4 @@ declare namespace SocketInterfaces {
     getCurrentProxy: () => IProxy;
     isSocketConnected: () => boolean;
   }
-
 }
