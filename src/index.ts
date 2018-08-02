@@ -1,6 +1,5 @@
-import ISocket from "socket";
-import IProxy from 'proxy';
 import {Socket} from "./socket";
+import {IProxy, ISocket} from "socketinterfaces";
 
 export {
   IProxy,

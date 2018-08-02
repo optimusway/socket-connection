@@ -1,4 +1,8 @@
-declare namespace Socket {
+declare module 'socketinterfaces' {
+  export = SocketInterfaces
+}
+
+declare namespace SocketInterfaces {
 
   export interface IProxy {
     connect: () => void;
@@ -25,14 +29,4 @@ declare namespace Socket {
     isSocketConnected: () => boolean;
   }
 
-}
-
-declare module 'proxy' {
-  import IProxy = Socket.IProxy;
-  export = IProxy
-}
-
-declare module 'socket' {
-  import ISocket = Socket.ISocket;
-  export = ISocket;
 }

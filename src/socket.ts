@@ -1,5 +1,4 @@
-import ISocket from "socket";
-import IProxy from 'proxy';
+import {IProxy, ISocket} from "socketinterfaces";
 
 export class Socket implements ISocket {
 
