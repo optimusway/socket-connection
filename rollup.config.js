@@ -7,7 +7,7 @@ export default {
   output: {
     file: 'dist/bundle/socket-connection.js',
     format: 'umd',
-    name: 'ws-connection',
+    name: 'socket-connection',
     sourcemap: true
   },
 

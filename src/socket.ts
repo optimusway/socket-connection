@@ -1,4 +1,3 @@
-/// <reference path="socketInterfaces.d.ts" />
 import ISocket from "socket";
 import IProxy from 'proxy';
 
