@@ -1,5 +1,4 @@
-import {Socket} from "./socket";
-import {IProxy, ISocket} from "socketinterfaces";
+import {Socket, ISocket, IProxy} from "./socket";
 
 export {
   IProxy,
