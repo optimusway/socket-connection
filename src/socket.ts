@@ -1,8 +1,7 @@
 export interface IProxy {
-  connect: () => Promise<void>;
-  close: () => Promise<void>;
-  send: (options: any) => Promise<void>;
-  getSubscription?: (subscriptionName: string) => any;
+  connect: () => Promise<any>;
+  close: () => Promise<any>;
+  send: (options: any) => Promise<any>;
   isConnected?: () => boolean;
 }
 
