@@ -6,15 +6,15 @@ export interface IProxy {
 }
 
 export interface ISocket {
-  connect: () => Promise<void>;
-  close: () => Promise<void>;
-  send: (options: any) => Promise<void>;
+  connect: () => Promise<any>;
+  close: () => Promise<any>;
+  send: (options: any) => Promise<any>;
   getCurrentProxy: () => IProxy;
   isSocketConnected: () => boolean;
 }
 
 export class Socket implements ISocket {
-  proxy: IProxy;
+  private readonly proxy: IProxy;
 
   constructor(proxy: IProxy) {
     this.proxy = proxy;
