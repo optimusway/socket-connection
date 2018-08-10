@@ -5,9 +5,9 @@ export default {
   entry: './src/index.ts',
 
   output: {
-    file: 'dist/bundle/socket-connection.js',
+    file: 'dist/bundle/subzero.js',
     format: 'umd',
-    name: 'socket-connection',
+    name: 'subzero',
     sourcemap: true
   },
 
