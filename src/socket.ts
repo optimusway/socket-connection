@@ -3,6 +3,8 @@ export interface IProxy {
   close: () => Promise<any>;
   send: (options: any) => Promise<any>;
   isConnected?: () => boolean;
+  onopen?: () => void;
+  onclose?: () => void;
 }
 
 export interface ISocket {

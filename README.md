@@ -3,14 +3,14 @@
 Socket-connection is abstract class over different realization of web socket connection.
 
 ### Installing
-    yarn add socket-connection
-    npm -i socket-connection
+    yarn add @lykkex/subzero
+    npm i @lykkex/subzero
 
 ### Usage
 
-    import {WampConnection} from 'socket-connection-wamp';
+    import {WampConnection} from '@lykkex/subzero-wamp';
     import {IConnectionOptions} from 'autobahn';
-    import {SocketConnection} from 'socket-connection';
+    import {SocketConnection} from '@lykkex/subzero';
 
     const options: IConnectionOptions = {};
     const wampProxy = new WampConnection(options);
